@@ -1,0 +1,30 @@
+﻿
+@using System.Data
+@model DataTable
+@{
+    ViewBag.Title = "AccountDetail";
+}
+
+<h2>Account Detail</h2>
+<table cellpadding="5" cellspacing="5" border="1">
+    <tr style="background-color:aliceblue">
+        <th>Name</th>
+        <th>Address</th>
+        <th>UserName</th>
+        <th>Age</th>
+    </tr>
+    @foreach (DataRow dr in Model.Rows)
+    {
+<tr>
+    <td>@dr["Name"]</td>
+    <td>@dr["Address"]</td>
+    <td>@dr["UserName"]</td>
+    <td>@dr["Age"]</td>
+
+
+</tr>
+    }
+</table>
+
+
+
